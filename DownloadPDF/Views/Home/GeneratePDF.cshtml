@@ -1,0 +1,39 @@
+﻿@model DownloadPDF.Models.GeneratePDFModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GeneratePDF</title>
+    <link rel="stylesheet" href="http://s40hrwebtst01/hraccentaccept/Ess2/Content/bootstrap/base?v=PUDFxlRUUS8e8pp6Y9WeVnF_4RmJM7BwtYyTz0D-zu81" />
+</head>
+<body>
+    <style>
+        .legend[_ngcontent-c4] {
+            display: block;
+            margin-bottom: 20px;
+        }
+    </style>
+    <style type="text/css" >
+        thead
+        {
+            display: table-header-group;
+        }
+        tfoot
+        {
+            display: table-footer-group;
+        }
+        tr {
+            page-break-inside: avoid;
+        }
+    </style>
+    <div>
+        @Html.Raw(Model.PDFContent)
+    </div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+﻿@model DownloadPDF.Models.GeneratePDFModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GeneratePDF</title>
+       <link rel="stylesheet" href="http://s40hrwebtst01/hraccentaccept/Ess2/Content/bootstrap/base?v=PUDFxlRUUS8e8pp6Y9WeVnF_4RmJM7BwtYyTz0D-zu81" />
+</head>
+<body>
+    <style>
+        .legend[_ngcontent-c4] {
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .legendColor[_ngcontent-c4] {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #000;
+            float: left;
+        }
+
+        .legendItem[_ngcontent-c4] {
+            margin-left: 50px;
+            margin-right: 50px;
+            display: inline-block;
+            min-width: 275px;
+        }
+
+        .legendDescription[_ngcontent-c4] {
+            display: inline-block;
+            font-weight: 700;
+            margin: 2px 5px 5px;
+            color: #000;
+            max-width: 200px;
+            white-space: nowrap;
+        }
+
+        #resultsTable[_ngcontent-c4] {
+            font-size: 90%;
+        }
+
+        .table[_ngcontent-c4], .table[_ngcontent-c4] td[_ngcontent-c4], .table[_ngcontent-c4] th[_ngcontent-c4] {
+            border: 2px solid #000;
+        }
+
+        thead {
+            display: table-header-group;
+            vertical-align: middle;
+            border-color: inherit;
+        }
+
+        tbody {
+            display: table-row-group;
+            vertical-align: middle;
+            border-color: inherit;
+        }
+
+        tr {
+            display: table-row;
+            vertical-align: inherit;
+            border-color: inherit;
+        }
+
+        .table[_ngcontent-c4] .info[_ngcontent-c4], .table[_ngcontent-c4] > thead[_ngcontent-c4] > tr[_ngcontent-c4] > th[_ngcontent-c4] {
+            background-color: #d3d3d3;
+            vertical-align: middle;
+        }
+
+        td.colorCell[_ngcontent-c4], td.colorCell[_ngcontent-c4] > span[_ngcontent-c4] {
+            position: relative;
+        }
+
+        td.colorCell[_ngcontent-c4] {
+            background-clip: padding-box !important;
+        }
+
+        .minWidth[_ngcontent-c4] {
+            min-width: 15px;
+        }
+
+        .smallerPadding[_ngcontent-c4] {
+            padding: 8px 2px;
+            text-align: center;
+        }
+
+    </style>
+    <style type="text/css">
+        thead {
+            display: table-header-group;
+        }
+
+        tfoot {
+            display: table-footer-group;
+        }
+
+        tr {
+            page-break-inside: avoid;
+        }
+    </style>
+    <div>
+        @Html.Raw(Model.PDFContent)
+    </div>
+</body>
+</html>
